@@ -6,6 +6,12 @@ gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
+gem 'devise'
+gem 'bootstrap-sass', '~> 3.3.5'
+gem 'bootswatch-rails'
+gem 'acts_as_votable', '~> 0.10.0'
+gem 'kaminari', '~> 0.17.0'
+
 group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
