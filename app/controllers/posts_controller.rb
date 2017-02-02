@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :upvote, :downvote]
   def index
-    @posts = Post.all.order("created_at DESC").page(params[:page]).per(5)
+    @posts = Post.all.order("created_at DESC").page(params[:page]).per(3)
     @post = Post.new
   end
 
