@@ -12,10 +12,10 @@ class Post < ApplicationRecord
   def self.random
     limit(5).order("RANDOM()")
   end
-
-  def self.search(search)
-	    where("title ILIKE :search", search: "%#{search}%")
-  end
+  
+  def self.search(params)
+	    posts = Post.where("title ILIKE ?", "%#{params[:search]}%") if params[:search].present?
+	end
 
   def split
     if self.body.include?("=")
@@ -23,9 +23,5 @@ class Post < ApplicationRecord
     else
       self.body.split('/').last if self.body
     end
-  end
-
-  def split2
-    self.body.split('=').last if self.body
   end
 end

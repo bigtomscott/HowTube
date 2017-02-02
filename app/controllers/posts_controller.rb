@@ -3,13 +3,6 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.order("created_at DESC").page(params[:page]).per(5)
     @post = Post.new
-
-    if params[:search]
-      @posts = Post.search(params[:search]).order(:cached_votes_score => :desc)
-      if @posts.empty?
-        flash[:notice] = "There are no tutorials matching your search"
-      end
-    end
   end
 
   def show
@@ -24,7 +17,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user = current_user
     if @post.save
-      redirect_to @post
+      redirect_to root_path
     else
       render "new"
       flash[:danger] = @post.errors.full_messages.to_sentence
@@ -41,6 +34,14 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.downvote_by(current_user)
     redirect_to :back
+  end
+
+  def search
+    if params[:search].blank?
+      @posts = Post.all
+    else
+      @posts = Post.search(params)
+    end
   end
 
   private
