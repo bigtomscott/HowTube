@@ -9,7 +9,7 @@
       <% @posts.each do |post| %>
       <div class="well well-lg">
         <p>
-        <iframe width="720" height="405" src="<%= "http://www.youtube.com/embed/"+post.code %>" frameborder="1" allowfullscreen></iframe>
+        <iframe width="720" height="405" src="<%= "http://www.youtube.com/embed/"+post.split %>" frameborder="1" allowfullscreen></iframe>
         </p>
         <br>
           <%= link_to "Good Work!", like_post_path(post), method: :put, class: "btn btn-success btn-xs" %><span class="text-success"> (<%= post.get_upvotes.size %>)</span>

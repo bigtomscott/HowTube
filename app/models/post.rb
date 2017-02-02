@@ -17,7 +17,15 @@ class Post < ApplicationRecord
 	    where("title ILIKE :search", search: "%#{search}%")
   end
 
-  def code
-    self.body.split('/').last if self.body
+  def split
+    if self.body.include?("=")
+      self.body.split('=').last if self.body
+    else
+      self.body.split('/').last if self.body
+    end
+  end
+
+  def split2
+    self.body.split('=').last if self.body
   end
 end
