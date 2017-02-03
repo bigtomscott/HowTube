@@ -36,7 +36,7 @@ Image credits: unsplash.com
     height: 100vh;
 }
 .fade-carousel .carousel-indicators > li {
-    margin: 0 2px 80px 0px;
+    margin: 0 2px 20px 0px;
     background-color: #f39c12;
     border-color: #f39c12;
     opacity: .7;
@@ -128,7 +128,7 @@ Image credits: unsplash.com
   background-image: url(http://imgur.com/Cm0G1V7.jpg);
 }
 .fade-carousel .slides .slide-3 {
-  background-image: url(http://imgur.com/tart3JC.jpg);
+  background-image: url(http://imgur.com/otWsISn.jpg);
 }
 
 /********************************/
@@ -139,4 +139,9 @@ Image credits: unsplash.com
 }
 @media screen and (max-width: 640px){
     .hero h1 { font-size: 4em; }
+}
+
+
+.home {
+  margin-top: -5%;
 }
