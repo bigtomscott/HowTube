@@ -17,7 +17,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user = current_user
     if @post.save
-      redirect_to root_path
+      redirect_to posts_path
     else
       render "new"
       flash[:danger] = @post.errors.full_messages.to_sentence

@@ -12,10 +12,10 @@ Rails.application.routes.draw do
     end
   end
 
-  root "posts#index"
+  root "homes#index"
 
   get "/topposts", to: "pages#topposts", as: "topposts"
   get "/randomposts", to: "pages#randomposts", as: "randomposts"
   get "/category/:id", to: "categories#show", as: "category"
-  
+
 end
