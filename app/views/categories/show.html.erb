@@ -1,41 +1,4 @@
-<div class="container">
-  <p>
-    <%= link_to "Submit a tutorial", new_post_path, class: "btn btn-primary" %>
-  </p>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-md-9">
-      <% @posts.each do |post| %>
-      <div class="well well-lg">
-        <p>
-          <%= post.body %>
-        </p>
-        <br>
-          <%= link_to "Good Work", like_post_path(post), method: :put, class: "btn btn-warning btn-xs" %><span class="text-warning"> (<%= post.get_upvotes.size %>)</span>
-          <%= link_to "Needs Work", dislike_post_path(post), method: :put, class: "btn btn-success btn-xs" %><span class="text-success"> (<%= post.get_downvotes.size %>)</span>
-          <a href="#" class="btn btn-link btn-xs">Comments</a><small><em>(300)</em></small>
-          <small class="pull-right">Created by: <%= post.user.name %> on <%= post.created_at.strftime("%B %d, %Y at %l:%M %p") %></small>
-          <br>
-          <span class="pull-right"><small>Category: <%= post.category.name %></small></span>
-      </div>
-      <% end %>
-    </div>
-    <div class="col-md-3">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title text-center">Categories</h3>
-        </div>
-        <div class="panel-body">
-          <div class="table-responsive">
-            <ul class="list-group">
-              <% Category.all.each do |category| %>
-                <li class="list-group-item"><%= link_to category.name, category_path(category) %></li>
-              <% end %>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render partial: "layouts/posts", posts: @posts %>
+<nav class="text-center">
+  <%= @posts %>
+</nav>
