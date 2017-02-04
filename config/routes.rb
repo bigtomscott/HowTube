@@ -18,4 +18,8 @@ Rails.application.routes.draw do
   get "/randomposts", to: "pages#randomposts", as: "randomposts"
   get "/category/:id", to: "categories#show", as: "category"
 
+  get "/test" do
+  "Hello world"
+end
+
 end
