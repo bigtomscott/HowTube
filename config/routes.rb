@@ -17,5 +17,9 @@ Rails.application.routes.draw do
   get "/topposts", to: "pages#topposts", as: "topposts"
   get "/randomposts", to: "pages#randomposts", as: "randomposts"
   get "/category/:id", to: "categories#show", as: "category"
+  get "/test" do
+  status 200
+  "Hello world"
+end
 
 end
