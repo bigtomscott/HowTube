@@ -8,4 +8,8 @@ class PagesController < ApplicationController
     @posts = Post.random
   end
 
+  def slackposts
+    @posts = Post.slack.order(cached_votes_score: :desc).first
+  end
+
 end
