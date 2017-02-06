@@ -12,10 +12,14 @@ class Post < ApplicationRecord
   def self.random
     limit(5).order("RANDOM()")
   end
-  
+
   def self.search(params)
-	    posts = Post.where("title ILIKE ?", "%#{params[:search]}%") if params[:search].present?
+	    posts = Post.where("title ILIKE ?", "%#{params[:search]}%").order(cached_votes_score: :desc) if params[:search].present?
 	end
+
+  def self.slack(params)
+      posts = Post.where("title ILIKE ?", "%#{params[:search]}%") if params[:search].present?
+  end
 
   def split
     if self.body.include?("=")
@@ -24,4 +28,5 @@ class Post < ApplicationRecord
       self.body.split('/').last if self.body
     end
   end
+
 end
