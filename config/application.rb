@@ -10,19 +10,7 @@ require "action_mailer/railtie"
 require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
-require 'httparty'
-require 'json'
 # require "rails/test_unit/railtie"
-
-get '/anonymize' do
-  postback params[:text], params[:channel_id]
-  status 200
-end
-
-def postback message, channel
-    slack_webhook = ENV['SLACK_WEBHOOK_URL']
-    HTTParty.post slack_webhook, body: {"text" => message.to_s, "username" => "John Doe", "channel" => params[:channel_id]}.to_json, headers: {'content-type' => 'application/json'}
-end
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.

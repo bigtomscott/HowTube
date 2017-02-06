@@ -17,10 +17,6 @@ class Post < ApplicationRecord
 	    posts = Post.where("title ILIKE ?", "%#{params[:search]}%").order(cached_votes_score: :desc) if params[:search].present?
 	end
 
-  def self.slack(params)
-      posts = Post.where("title ILIKE ?", "%#{params[:search]}%") if params[:search].present?
-  end
-
   def split
     if self.body.include?("=")
       self.body.split('=').last if self.body
