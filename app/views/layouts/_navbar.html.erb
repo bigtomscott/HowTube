@@ -8,19 +8,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="btn btn-danger btn-sm" href="<%= posts_path %>">
-                <span class="fa-stack fa-sm">
-                  <i class="fa fa-television fa-stack-2x"></i>
-                  <i class="fa fa-graduation-cap fa-stack-1x"></i>
-                </span></i> HowTube</a>
     </div>
+
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <% if user_signed_in? %>
-
       <ul class="nav navbar-nav">
+        <li class=<%= is_active?(topposts_path) %>><%= link_to "Home", posts_path %></li>
         <li class=<%= is_active?(topposts_path) %>><%= link_to "Top Tutorials", topposts_path %></li>
         <li class=<%= is_active?(randomposts_path) %>><%= link_to "Random Tutorials", randomposts_path %></li>
       </ul>

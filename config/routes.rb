@@ -11,8 +11,8 @@ Rails.application.routes.draw do
       get :search
     end
   end
-  
-  resources :slack_responses, only: :create
+
+  resources :slackresponses, only: :create
 
   root "homes#index"
 

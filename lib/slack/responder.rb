@@ -9,7 +9,7 @@ class Slack::Responder
   end
 
   def response
-    @response = "You asked: #{message}"
+    @response = Post.best.first.body
   end
 
   private attr_reader

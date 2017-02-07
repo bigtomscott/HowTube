@@ -26,6 +26,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'shoulda'
   gem 'valid_attribute'
+  gem 'ngrok-tunnel'
 end
 
 group :production do

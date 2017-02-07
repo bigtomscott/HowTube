@@ -100,6 +100,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
+    ngrok-tunnel (2.1.0)
     nio4r (1.2.1)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
@@ -223,6 +224,7 @@ DEPENDENCIES
   kaminari (~> 0.17.0)
   launchy
   listen (~> 3.0.5)
+  ngrok-tunnel
   pg (~> 0.18)
   pry-rails
   puma (~> 3.0)
