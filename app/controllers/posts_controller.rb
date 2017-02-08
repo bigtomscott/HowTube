@@ -38,9 +38,9 @@ class PostsController < ApplicationController
 
   def search
     if params[:search].blank?
-      @posts = Post.all
+      @posts = Post.all.page(params[:page]).per(3)
     else
-      @posts = Post.search(params)
+      @posts = Post.search(params).page(params[:page]).per(3)
     end
   end
 
