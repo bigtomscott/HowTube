@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :slackresponses, only: :create
+  resources :slackresponses
 
   root "homes#index"
 

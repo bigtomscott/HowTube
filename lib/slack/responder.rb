@@ -1,5 +1,4 @@
 class Slack::Responder
-
   def initialize(message)
     @message = message
   end
@@ -9,10 +8,11 @@ class Slack::Responder
   end
 
   def response
-    @response = Post.best.first.body
+    @response ||= "You asked: #{message}"
   end
 
-  private attr_reader
-  :message
+  private
+
+  attr_reader :message
 
 end

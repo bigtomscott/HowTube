@@ -1,3 +1,3 @@
 module Slack
-  TOKEN = ENV['SLACK_TOKEN']
+  TOKEN = ENV['SLACK_TOKENS']
 end

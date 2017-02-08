@@ -11,6 +11,7 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'bootswatch-rails'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'kaminari', '~> 0.17.0'
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development do
   gem 'listen', '~> 3.0.5'
