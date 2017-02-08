@@ -5,7 +5,7 @@ class SlackresponsesController < ApplicationController
     render nothing: true, status: :ok and return unless responder.respond?
     # Respond differently to Slash Command vs Webhook POSTs # See `Responding` sections above for the require difference.
 
-    render json: {response_type: "in_channel", text: responder.response.to_s }
+    render json: {response_type: "in_channel", text: responder.response.to_s, "unfurl_media": true }
   end
 
   private
