@@ -29,12 +29,13 @@
       </div>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Sign Out", destroy_user_session_path %></li>
+        <%= link_to destroy_user_session_path, method: :delete do %>
+          <button type="button" class="btn btn-default navbar-btn">Log out</button>
+          <% end %>
 
       <% else %>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Sign In", new_user_session_path %></li>
-
+        <li><%= link_to "Log In", new_user_session_path %></li>
       </ul>
 
     </div><!-- /.navbar-collapse -->
