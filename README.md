@@ -1,1 +1,1 @@
-![Alt Text](https://github.com/bigtomscott/howtube/lib/assets/howtube.gif)
+![Alt Text](https://github.com/bigtomscott/howtube/Howtube.gif)
