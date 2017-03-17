@@ -1,1 +1,1 @@
-![](https://media.giphy.com/media/l4FGKOK2iGbU0UoQ8/giphy.gif)
+![Alt Text](https://github.com/bigtomscott/howtube/raw/master/lib/assets/howtube.gif)
