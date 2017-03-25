@@ -8,3 +8,6 @@ Howtube is a reddit style user community focused on video tutorials. Users can c
 ### How to Howtube
 
 ![Alt Text](https://github.com/bigtomscott/HowTube/blob/master/Howtube.gif)
+
+
+### The Basics
