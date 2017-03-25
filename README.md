@@ -17,3 +17,4 @@ Howtube is a reddit style user community focused on video tutorials. Users can c
 * Bootstrap with custom CSS and SASS
 * Designed to be responsive
 * User authentication with [Devise](https://github.com/plataformatec/devise)
+* Pagination with [Kaminari](https://github.com/amatsuda/kaminari)
