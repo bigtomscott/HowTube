@@ -14,3 +14,5 @@ Howtube is a reddit style user community focused on video tutorials. Users can c
 * React.js
 * RoR
 * PostgreSQL
+* Bootstrap with custom CSS and SASS
+* Designed to be responsive
