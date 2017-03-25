@@ -16,3 +16,4 @@ Howtube is a reddit style user community focused on video tutorials. Users can c
 * PostgreSQL
 * Bootstrap with custom CSS and SASS
 * Designed to be responsive
+* User authentication with [Devise](https://github.com/plataformatec/devise)
